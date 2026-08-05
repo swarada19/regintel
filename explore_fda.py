@@ -4,9 +4,13 @@ import requests
 
 BASE_URL = "https://api.fda.gov/drug/enforcement.json"
 
-def fetch_recalls (search: str, limit:int = 5)-> dict:
-    """Fetch recalls matching a search query. Returns parsed JSON."""
-    params = {"search": search, "limit": limit}
+def fetch_recalls (search: str | None = None, limit:int = 5, sort: str | None = None)-> dict:
+    """Fetch recalls, optionally filtered/sorted. Returns parsed JSON."""
+    params = {"limit": limit}
+    if search:
+        params["search"] = search
+    if sort:
+        params["sort"] = sort
     response = requests.get(BASE_URL, params=params, timeout=10)
     response.raise_for_status()
     return response.json()
