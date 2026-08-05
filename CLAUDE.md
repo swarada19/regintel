@@ -5,7 +5,7 @@ FastAPI, LangChain, LangGraph, ChromaDB, Groq API, RAGAS, Docker, GCP Cloud Run
 
 ## Roadmap
 Full 12-week phased roadmap is in ROADMAP.md — read it before starting any task.
-We are currently on: Phase 1 — FastAPI backend fundamentals (update this line as we progress).
+We are currently on: Phase 2 — Talking to an LLM with LangChain (update this line as we progress).
 
 ## Working style
 This is a learning project. Only work on the CURRENT phase listed above — never jump ahead.
